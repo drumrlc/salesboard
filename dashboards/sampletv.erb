@@ -1,0 +1,39 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.gridsterLayout('[{"col":3,"row":1,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":2,"size_y":1},{"col":1,"row":1,"size_x":2,"size_y":3},{"col":3,"row":2,"size_x":3,"size_y":1},{"col":3,"row":3,"size_x":3,"size_y":1}]')
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 5
+});
+</script>
+
+
+<% content_for :title do %>1080p dashboard<% end %>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="welcome" data-view="Text" data-title="Hello" data-text="This is your shiny new 1080p dashboard." data-moreinfo="Protip: You can drag the widgets around!"></div>
+    </li> 
+    
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="3">
+      <div data-id="buzzwords" data-view="List" data-unordered="true" data-title="Buzzwords" data-moreinfo="# of times said around the office"></div>
+    </li>
+
+        <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
+      <div data-id="convergence" data-view="Graph" data-title="Convergence" style="background-color:#47bbb3;" data-moreinfo="poop" ></div>
+    </li>
+	<li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
+  <div data-id="convergence" data-view="Graph" data-title="Convergence" style="background-color:#47bbb3;" data-moreinfo="poop" ></div>
+</li>
+
+  
+
+  </ul>
+  <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center>
+</div>
