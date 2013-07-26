@@ -1,14 +1,14 @@
 <script type='text/javascript'>
 $(function() {
   // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
-  Dashing.gridsterLayout('[{"col":3,"row":1,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":2,"size_y":1},{"col":1,"row":1,"size_x":2,"size_y":3},{"col":3,"row":2,"size_x":3,"size_y":1},{"col":3,"row":3,"size_x":3,"size_y":1}]')
+  Dashing.gridsterLayout('[{"col":3,"row":1,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":1,"size_y":1},{"col":5,"row":1,"size_x":1,"size_y":1},{"col":1,"row":1,"size_x":2,"size_y":3},{"col":3,"row":2,"size_x":3,"size_y":1},{"col":3,"row":3,"size_x":3,"size_y":1}]')
   Dashing.widget_base_dimensions = [370, 340]
   Dashing.numColumns = 5
 });
 </script>
 
 
-<% content_for :title do %>1080p dashboard<% end %>
+<% content_for :title do %>PSS Sales Board<% end %>
 
 <div class="gridster">
   <ul>
@@ -17,19 +17,22 @@ $(function() {
       <i class="icon-time icon-background"></i>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-      <div data-id="welcome" data-view="Text" data-title="Hello" data-text="This is your shiny new 1080p dashboard." data-moreinfo="Protip: You can drag the widgets around!"></div>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="2013Total" data-view="Number" data-title="Total Machine Sales 2013" > </div>
     </li> 
+ <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="2012Total" data-view="Number" data-title="Total Machine Sales 2012"	> </div>
+    </li>
     
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="3">
-      <div data-id="buzzwords" data-view="List" data-unordered="true" data-title="Buzzwords" data-moreinfo="# of times said around the office"></div>
+      <div data-id="buzzwords" data-view="List" data-unordered="true" data-title="Sales" data-moreinfo="Current Month Sales List"></div>
     </li>
 
         <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
-      <div data-id="convergence" data-view="Graph" data-title="Convergence" style="background-color:#47bbb3;" data-moreinfo="poop" ></div>
+      <div data-id="convergence" data-view="Graph" data-title="Sales by Month 2013" style="background-color:#47bbb3;" data-moreinfo="" ></div>
     </li>
 	<li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
-  <div data-id="convergence" data-view="Graph" data-title="Convergence" style="background-color:#47bbb3;" data-moreinfo="poop" ></div>
+  <div data-id="convergence" data-view="Graph" data-title="Sales by Month 2012" style="background-color:#33CC33;" data-moreinfo="" ></div>
 </li>
 
   
